@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>A&H auto</title>
+<link rel="stylesheet" href="style.css">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+
+<nav>
+<a href="#onas">O nás</a>
+<a href="#sluzby">Služby</a>
+<a href="#ukazky">Ukázky naší práce</a>
+<a href="#recenze">Recenze</a>
+<a href="#kontakt">Kontakt</a>
+
+<a href="https://instagram.com" target="_blank">
+<i class="fa-brands fa-instagram"></i>
+</a>
+</nav>
+
+
+
+<section class="hero">
+
+<div class="hero-text">
+    
+<h1>A&H auto</h1>
+<p>Profesionální opravy a servis BMW a dalších.</p>
+<button>Naše služby</button>
+<button class="cta">Objednat servis</button>
+
+</div>
+
+</section>
+
+
+<section id="onas">
+<h2>O nás</h2>
+<p>Jsme rodinný autoservis s dlouholetou tradicí.</p>
+</section>
+
+
+<section id="sluzby">
+
+<h2>Služby</h2>
+
+<div class="sluzby">
+
+<div class="karta diagnostika">
+<h3>Diagnostika vozidla</h3>
+<p>Kontrola elektroniky a chyb vozidla.</p>
+<p><strong>500 Kč</strong></p>
+</div>
+
+<div class="karta motor">
+<h3>Servis a oprava motorů</h3>
+<p>Kompletní servis motorových částí. Řešíme mechanické opravy, elektroniku, výměnu provozních kapalin i úniky provozních kapalin.</p>
+<p><strong>900 Kč / hod</strong></p>
+</div>
+
+<div class="karta pneu">
+<h3>Výměna pneumatik</h3>
+<p>Rychlá výměna a vyvážení kol.</p>
+<p><strong>800 Kč</strong></p>
+</div>
+
+<div class="karta brzdy">
+<h3>Brzdy a podvozek</h3>
+<p>Kompletní servis pro vaši bezpečnost a jízdní komfort. Výměna brzdových komponentů, servis náprav, tlumičů a kontrola podvozkových částí.</p>
+<p><strong>700 Kč / hod</strong></p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="ukazky">
+
+<h2>Ukázky naší práce</h2>
+
+<h3 onclick="zmenObrazek('motor')">Oprava motoru</h3>
+<h3 onclick="zmenObrazek('brzdy')">Brzdy a podvozek</h3>
+<h3 onclick="zmenObrazek('pneu')">Výměna pneumatik</h3>
+
+<img id="ukazkaObrazek" src="obrazky/motor.jpeg" width="400">
+
+</section>
+
+
+<section id="recenze">
+<h2>Recenze</h2>
+<form action="recenze.php" method="POST">
+
+<input type="text" name="jmeno" placeholder="Vaše jméno" required>
+
+<input type="email" name="email" placeholder="Váš email" required>
+
+<textarea name="recenze" placeholder="Vaše recenze" required></textarea>
+
+<button type="submit">Odeslat recenzi</button>
+
+</form>
+</section>
+
+
+<section id="kontakt">
+<h2>Kontakt</h2>
+<p>Email: servis@autoservis.cz</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
