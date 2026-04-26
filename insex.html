@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Maturitní projekt - Řemeslník</title>
+
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGACE -->
+
+    <nav class="lista">
+
+    <div class="obal-navigace">
+
+        <a href="#" class="logo">MOJE FIRMA</a>
+
+        <!-- HAMBURGER TLAČÍTKO -->
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <ul class="odkazy" id="menu">
+            <li><a href="#o-nas">O nás</a></li>
+            <li><a href="#sluzby">Služby</a></li>
+            <li><a href="#prace">Práce</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="#recenze">Recenze</a></li>
+        </ul>
+
+    </div>
+
+    </nav>
+
+
+
+    <!-- HERO -->
+
+    <header class="header-foto">
+        <div class="hero-box">
+
+            <h1>Kvalitní instalatérské práce</h1>
+
+            <p>
+                Rychle, levně a profesionálně ve vašem okolí
+            </p>
+
+            <a href="#kontakt" class="tlacitko-modre">
+                Objednat práci
+            </a>
+
+        </div>
+    </header>
+
+
+
+    <!-- O NÁS -->
+
+    <section id="o-nas" class="sekce animace">
+
+        <div class="obal">
+
+            <h2>O nás</h2>
+
+            <div class="flex">
+
+                <div>
+                    <p>
+                        Nabízíme kompletní služby v oblasti vodoinstalace.
+                        Máme více než 10 let zkušeností a stovky spokojených zákazníků.
+                    </p>
+                </div>
+
+                <div>
+                    <img src="img/instalater.jpg" class="foto">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SLUŽBY -->
+
+    <section id="sluzby" class="sekce seda animace">
+
+        <div class="obal">
+
+            <h2>Naše služby</h2>
+
+            <div class="karty">
+
+                <div class="karta">
+                    <h3>Oprava WC</h3>
+                    <p>500 Kč / hod</p>
+                </div>
+
+                <div class="karta">
+                    <h3>Čištění odpadu</h3>
+                    <p>800 Kč / hod</p>
+                </div>
+
+                <div class="karta">
+                    <h3>Nové rozvody</h3>
+                    <p>1200 Kč / hod</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SLIDER -->
+
+    <section id="prace" class="sekce animace">
+
+        <div class="obal">
+
+            <h2>Ukázky naší práce</h2>
+
+            <div class="slider">
+
+                <img id="slider-foto" src="img/prace1.jpg">
+
+                <h3 id="slider-nadpis">
+                    Rekonstrukce koupelny
+                </h3>
+
+                <p id="slider-text">
+                    Kompletní výměna obkladů a rozvodů.
+                </p>
+
+                <div class="slider-btn">
+
+                    <button onclick="predchozi()" id="btn-predchozi" disabled>
+                        ←
+                    </button>
+
+                    <button onclick="dalsi()" id="btn-dalsi">
+                        →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- KONTAKT -->
+
+    <section id="kontakt" class="sekce">
+
+        <div class="obal">
+
+            <h2>Kontakt</h2>
+
+            <div class="flex">
+
+                <div>
+                    <p>Telefon: +420 777 666 555</p>
+                    <p>Email: info@remeslnik.cz</p>
+
+                    <a href="tel:+420777666555" class="tlacitko-modre">
+                        Zavolat
+                    </a>
+                </div>
+
+                <div class="mapa">
+
+                    <iframe
+                        src="https://maps.google.com/maps?q=Praha&t=&z=13&ie=UTF8&iwloc=&output=embed">
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- RECENZE -->
+
+   <!-- ===================================================== -->
+    <!-- FORMULÁŘ RECENZE -->
+    <!-- ===================================================== -->
+
+    <!--
+    VERZE 1 – FUNGUJE DOMA (JAVASCRIPT)
+    POUŽÍVÁ LOCAL STORAGE
+    -->
+
+    <form id="recenzeForm" class="formular">
+
+        <input 
+            type="text"
+            id="jmeno"
+            placeholder="Vaše jméno"
+            required
+        >
+
+        <textarea
+            id="text"
+            placeholder="Vaše recenze"
+            required
+        ></textarea>
+
+        <div class="hvezdy">
+
+            <input type="radio" name="rating" id="star5" value="5" checked>
+            <label for="star5">★</label>
+
+            <input type="radio" name="rating" id="star4" value="4">
+            <label for="star4">★</label>
+
+            <input type="radio" name="rating" id="star3" value="3">
+            <label for="star3">★</label>
+
+            <input type="radio" name="rating" id="star2" value="2">
+            <label for="star2">★</label>
+
+            <input type="radio" name="rating" id="star1" value="1">
+            <label for="star1">★</label>
+
+        </div>
+
+        <button type="submit">
+            Odeslat recenzi
+        </button>
+
+    </form>
+
+
+
+    <!-- ===================================================== -->
+    <!-- PHP VERZE PRO ŠKOLU -->
+    <!-- ===================================================== -->
+
+    <!--
+
+    ABY TO FUNGOVALO S PHP:
+
+    1️⃣ SMAŽ CELOU JAVASCRIPT VERZI FORMULÁŘE NAD TÍMTO KOMENTÁŘEM
+
+    2️⃣ ODKOMENTUJ TENTO FORMULÁŘ
+
+    3️⃣ UJISTI SE ŽE MÁŠ SOUBOR
+
+    ulozit.php
+
+    -->
+
+    <!--
+
+    <form action="ulozit.php" method="POST" class="formular">
+
+        <input
+            type="text"
+            name="jmeno"
+            placeholder="Vaše jméno"
+            required
+        >
+
+        <textarea
+            name="text"
+            placeholder="Vaše recenze"
+            required
+        ></textarea>
+
+        <button type="submit">
+            Odeslat recenzi
+        </button>
+
+    </form>
+
+    -->
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>© 2026 Maturitní projekt</p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
